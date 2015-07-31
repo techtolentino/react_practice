@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>React Component Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://fb.me/react-0.13.3.min.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+  </head>
+  <body>
+
+    <div id="react-container"></div>
+
+		<script type="text/jsx">
+      var MyComponent = React.createClass({
+        render: function() {
+          return 
+            <div>
+              <h1>{this.props.text}</h1>
+              <p>{this.props.children}</p>
+            </div>;
+        }
+      });
+
+      React.render(
+        <div>
+          <MyComponent text="Alpha">
+            This is the Alpha child.
+          </MyComponent>
+          <MyComponent text="Beta">
+            This is the Beta child.
+          </MyComponent>
+          <MyComponent text="Gamma">
+            This is the Gamma child.
+          </MyComponent>
+        </div>
+        , document.getElementById('react-container'));
+    </script>
+  </body>
+</html>
